@@ -1,0 +1,26 @@
+.list2 li div:last-child p{
+			height:auto;
+			/*width:100%;*/
+		}
+		.list2 li div:last-child p.sl{
+			height: 30px;
+			overflow:hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			width:75%;
+		}
+		.zk{
+			width:100% !important;
+			height:auto !important;
+			overflow: visible !important;
+			white-space: normal !important;
+		}
+		.zk_btn{
+			border:none;
+			background:#fdfcfc;
+			color:#007AFF;
+			text-decoration:underline;
+			margin:0;
+			padding:5px 0px 5px 10px;
+			float:right;
+		}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>附件</title>
+	<link rel="stylesheet" href="css/common.css" />
+	<link rel="stylesheet" href="css/mui.css" />
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+	<header>
+		<div>
+			<!--<a href="order_detail1.html">返回</a>-->
+			<a href="javascript:history.go(-1);">返回</a>
+			<p>附件</p>
+			<!--<a class="request" href="in_request">发起请求</a>-->
+		</div>
+	</header>
+	
+	<div class="mui-container content mt_1">
+		<!--<div class="list_title" style="background: none;color:#333333">
+				<p style="color:#333333;font-weight:bold;">通知提醒</p>
+			</div>
+		<div >-->
+			
+			<div style="margin-top:;">
+				<ul class="fj_list">
+					<li>
+						<a href="#">
+							<div class="img">
+								<img src="img/file/PDF.png" alt="" />
+							</div>
+							<div>
+								<p>20171124.pdf</p>
+								<p>21MB</p>
+							</div>
+							<i></i>
+							<!--暂停用这个<i class="stop"></i>-->
+							<!--下载完成用这个<i class="done"></i>-->
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="img">
+								<img src="img/yuantiao.jpg" alt="" />
+							</div>
+							<div>
+								<p>20171124.pdf</p>
+								<p>21MB</p>
+							</div>
+							<i></i>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="img">
+								<img src="img/file/PPT.png" alt="" />
+							</div>
+							<div>
+								<p>20171124.pdf</p>
+								<p>21MB</p>
+							</div>
+							<i></i>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="img">
+								<img src="img/file/DOC.png" alt="" />
+							</div>
+							<div>
+								<p>20171124.pdf</p>
+								<p>21MB</p>
+							</div>
+							<i></i>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="img">
+								<img src="img/file/TXT.png" alt="" />
+							</div>
+							<div>
+								<p>20171124.pdf</p>
+								<p>21MB</p>
+							</div>
+							<i></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+	</div>
+	<script src="js/jquery-1.11.0.js"></script>
+	<script src="js/mui.min.js"></script>
+	<script>
+		mui('body').on('tap','a',function(){
+		    window.top.location.href=this.href;
+		});
+//		$(function(){
+//			var W = $(".tishi_box>div div").width();
+//			$(".tishi_box>div div").css({
+//	        "height": W,
+//	    	});
+//	    	$(".content").css({
+//	        "margin-top": W+83,
+//	    	});
+//  	});
+	</script>
+</body>
+</html>

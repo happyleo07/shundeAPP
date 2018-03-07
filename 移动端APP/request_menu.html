@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>工作处理</title>
+	<link rel="stylesheet" href="css/common.css" />
+	<link rel="stylesheet" href="css/mui.css" />
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+	<header>
+		<div>
+			<a href="order_list.html">返回</a>
+			<p>工作处理</p>
+			<a href="yw_index.html">首页</a>
+		</div>
+	</header>
+	
+	<div class="mui-container content mt_1">
+			<div class="re_content_box">
+				<div class="re_title">
+					<h3>软件应用类</h3>
+				</div>
+				<div class="re_content">
+					<ul class="menu_list">
+						<li><a href="request_menu_detail.html">邮件故障</a></li>
+						<li><a href="#">项目管理故障</a></li>
+						<li><a href="#">OA故障</a></li>
+						<li><a href="#">监控摄像头损坏</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="re_content_box">
+				<div class="re_title">
+					<h3>技术服务类</h3>
+				</div>
+				<div class="re_content">
+					<ul class="menu_list">
+						<li><a href="#">摄影摄像</a></li>
+						<li><a href="#">监控同录</a></li>
+						<li><a href="#">远程支持</a></li>
+						<li><a href="#">检验鉴定</a></li>
+						<li><a href="#">会议支持</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="re_content_box">
+				<div class="re_title">
+					<h3>终端类</h3>
+				</div>
+				<div class="re_content">
+					<ul class="menu_list">
+						<li><a href="#">高温预警</a></li>
+						<li><a href="#">电脑维护</a></li>
+					</ul>
+				</div>
+			</div>
+			
+	</div>
+	<script src="js/jquery-1.11.0.js"></script>
+	<script src="js/mui.min.js"></script>
+	<script>
+		mui('body').on('tap','a',function(){
+		    window.top.location.href=this.href;
+		});
+//		$(function(){
+//			var W = $(".tishi_box>div div").width();
+//			$(".tishi_box>div div").css({
+//	        "height": W,
+//	    	});
+//	    	$(".content").css({
+//	        "margin-top": W+83,
+//	    	});
+//  	});
+	</script>
+</body>
+</html>

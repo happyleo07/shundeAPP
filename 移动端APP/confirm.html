@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>确认与评价</title>
+	<link rel="stylesheet" href="css/common.css" />
+	<link rel="stylesheet" href="css/mui.css" />
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+	<header>
+		<div>
+			<a href="request_list.html">返回</a>
+			<p>确认与评价</p>
+			<!--<a href="pt_index.html">首页</a>-->
+		</div>
+	</header>
+	<div class="mui-container content mt_1 bt_1">
+			<div class="re_content_box">
+				<div class="re_title">
+					<h3>服务确认</h3>
+				</div>
+				<div class="re_content">
+						<form class="mui-input-group">
+							<div class="mui-input-row mui-radio">
+								<label>已解决</label>
+								<input name="radio1" type="radio"  checked>
+							</div>
+							<div class="mui-input-row mui-radio">
+								<label>部分解决</label>
+								<input name="radio1" type="radio">
+							</div>
+							<div class="mui-input-row mui-radio">
+								<label>未解决</label>
+								<input name="radio1" type="radio">
+							</div>
+						</form>
+				</div>
+			</div>
+			<div class="re_content_box">
+				<div class="re_title">
+					<h3>服务评价</h3>
+				</div>
+				<div class="re_content">
+					<ul class="commet_star">
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="re_content_box">
+				<div class="re_title">
+					<h3>意见与建议</h3>
+				</div>
+				<div class="re_content">
+					<textarea name="" rows="" cols="" placeholder="请填写10个字以上的问题描述以便我们提供更好的帮助"></textarea>
+				</div>
+			</div>
+	</div>
+	<a class="bottom_btn" href="#" id="alertBtn">完成</a>
+	<script src="js/jquery-1.11.0.js"></script>
+	<script src="js/mui.min.js"></script>
+	<script>
+		mui.init({
+				
+			});
+		document.getElementById("alertBtn").addEventListener('tap', function() {
+				mui.alert('感谢您的评价！', '用户', function() {
+//					info.innerText = '你刚关闭了警告框';
+					location.href="request_detail2.html";
+				});
+			});
+//		mui('body').on('tap','a',function(){
+//		    window.top.location.href=this.href;
+//		});
+//		$(function(){
+//			var W = $(".tishi_box>div div").width();
+//			$(".tishi_box>div div").css({
+//	        "height": W,
+//	    	});
+//	    	$(".content").css({
+//	        "margin-top": W+83,
+//	    	});
+//  	});
+		$(function(){
+			$(".commet_star li").click(function(){
+				$(this).addClass("cur");
+				$(this).prevAll().addClass("cur");
+				$(this).nextAll().removeClass("cur");
+			});
+		});
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>服务统计</title>
+	<link rel="stylesheet" href="css/common.css" />
+	<link rel="stylesheet" href="css/mui.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<style>
+		.re_content .row>div label{
+			width:80px;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div>
+			<a href="manage_index.html">返回</a>
+			<p>服务统计</p>
+			<a href="manage_index.html">首页</a>
+		</div>
+	</header>
+	
+	<div class="mui-container content mt_1">
+			<div class="re_content_box">
+				<div class="re_title">
+					<h3>今日运维动态</h3>
+				</div>
+				<div class="re_content">
+					<ul class="count_title">
+						<li>
+							<p>请求数</p>
+							<span>36</span>
+						</li>
+						<li>
+							<p>解决数</p>
+							<span>31</span>
+						</li>
+						<li>
+							<p>差评数</p>
+							<span>0</span>
+						</li>
+					</ul>
+					
+					<h4 style="font-size:12px;margin-left:6%;font-weight:normal;">工程师状态</h4>
+					<div class="count_detail">
+						<div class="red">
+							<label for="">忙碌</label>
+							<div>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+							<p>9</p>
+						</div>
+					</div>
+					<div class="count_detail">
+						<div class="blue">
+							<label for="">空闲</label>
+							<div>
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+							<p>3</p>
+						</div>
+					</div>
+					<div class="count_detail">
+						<div class="gray">
+							<label for="">休闲</label>
+							<div>
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+							<p>3</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="re_content_box">
+				<div class="re_title">
+					<h3>全年运维统计</h3>
+				</div>
+				<div class="re_content">
+					<ul class="count_title">
+						<li>
+							<p>请求数</p>
+							<span>1278</span>
+						</li>
+						<li>
+							<p>解决数</p>
+							<span>1211</span>
+						</li>
+						<li>
+							<p>差评数</p>
+							<span>2728</span>
+						</li>
+					</ul>
+					<div style="width: 95%;margin:10px auto 0 auto;height: 200px" id="main01"></div>
+					<div style="width: 95%;margin:10px auto 0 auto;height: 200px" id="main02"></div>
+				</div>
+			</div>
+			
+	</div>
+	<script src="js/jquery-1.11.0.js"></script>
+	<script src="js/mui.min.js"></script>
+	<script src="js/echarts.min.js "></script>
+	
+	<script>
+		mui('body').on('tap','a',function(){
+		    window.top.location.href=this.href;
+		});
+//		$(function(){
+//			var W = $(".tishi_box>div div").width();
+//			$(".tishi_box>div div").css({
+//	        "height": W,
+//	    	});
+//	    	$(".content").css({
+//	        "margin-top": W+83,
+//	    	});
+//  	});
+//		饼状图表
+		var myChart01 = echarts.init(document.getElementById('main01'));
+		option = {
+//		    backgroundColor: '#2c343c',
+		
+		    title: {
+		        text: '分类统计',
+		        left: 'left',
+		        top: 20,
+		        textStyle: {
+		            color: '#959595'
+		        }
+		    },
+		
+		    tooltip : {
+		        trigger: 'item',
+		        formatter: "{a} <br/>{b} : {c} ({d}%)"
+		    },
+		
+		    visualMap: {
+		        show: false,
+		        min: 80,
+		        max: 600,
+		        inRange: {
+		            colorLightness: [0, 1]
+		        }
+		    },
+		    series : [
+		        {
+		            name:'分类统计',
+		            type:'pie',
+		            radius : '55%',
+		            center: ['50%', '50%'],
+		            data:[
+		                {value:335, name:'网络类'},
+		                {value:310, name:'软件应用类'},
+		                {value:274, name:'基础资源类'},
+		                {value:235, name:'终端类'},
+		                {value:400, name:'技术服务类'}
+		            ].sort(function (a, b) { return a.value - b.value; }),
+		            roseType: 'radius',
+		            label: {
+		                normal: {
+		                    textStyle: {
+		                        color: '#959595'
+		                    }
+		                }
+		            },
+		            labelLine: {
+		                normal: {
+		                    lineStyle: {
+		                        color: '#959595'
+		                    },
+		                    smooth: 0.2,
+		                    length: 10,
+		                    length2: 20
+		                }
+		            },
+		            itemStyle: {
+		                normal: {
+		                    color: '#c23531'
+		                }
+		            },
+		
+		            animationType: 'scale',
+		            animationEasing: 'elasticOut',
+		            animationDelay: function (idx) {
+		                return Math.random() * 200;
+		            }
+		        }
+		    ]
+		};
+	myChart01.setOption(option);
+        window.addEventListener("resize", function() {
+            myChart01.resize();
+        });
+	//环状图表
+	var myChart02 = echarts.init(document.getElementById('main02'));
+	var option = {
+		title: {
+		        text: '服务评价',
+		        left: 'left',
+		        top: 0,
+		        textStyle: {
+		            color: '#959595'
+		        }
+		    },
+	    tooltip: {
+	        trigger: 'item',
+	        formatter: "{a} <br/>{b}: {c} ({d}%)"
+	    },
+	    legend: {
+	        orient: 'vertical',
+	        x: 'right',
+	        data:['1星','2星','3星','4星','5星']
+	    },
+	    series: [
+	        {
+	            name:'服务评价',
+	            type:'pie',
+	            radius: ['50%', '70%'],
+	            avoidLabelOverlap: false,
+	            label: {
+	                normal: {
+	                    show: false,
+	                    position: 'center'
+	                },
+	                emphasis: {
+	                    show: true,
+	                    textStyle: {
+	                        fontSize: '30',
+	                        fontWeight: 'bold'
+	                    }
+	                }
+	            },
+	            labelLine: {
+	                normal: {
+	                    show: false
+	                }
+	            },
+	            data:[
+	                {value:335, name:'4星'},
+	                {value:310, name:'5星'},
+	                {value:234, name:'1星'},
+	                {value:135, name:'2星'},
+	                {value:1548, name:'3星'}
+	            ]
+	        }
+	    ]
+	};
+	myChart02.setOption(option);
+        window.addEventListener("resize", function() {
+            myChart02.resize();
+        });
+	</script>
+</body>
+</html>

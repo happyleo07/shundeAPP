@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>知识库</title>
+	<link rel="stylesheet" href="css/common.css" />
+	<link rel="stylesheet" href="css/mui.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<link href="css/mui.picker.css" rel="stylesheet" />
+	<link href="css/mui.poppicker.css" rel="stylesheet" />
+</head>
+<body>
+	<header>
+		<div>
+			<a href="yw_index.html">返回</a>
+			<p>知识库</p>
+			<a href="yw_index.html">首页</a>
+		</div>
+	</header>
+	
+	<div class="mui-container content mt_1 bt_1">
+		<form action="">
+		<!--<div class="list_title" style="background: none;color:#333333">
+				<p style="color:#333333;font-weight:bold;">通知提醒</p>
+			</div>
+		<div >-->
+			<div class="tab_title">
+				<div id="segmentedControl" class="mui-segmented-control" >
+					<a class="mui-control-item mui-active" href="#item1">我的收藏</a>
+					<a class="mui-control-item" href="#item2">我的知识</a>
+					<a class="mui-control-item" href="#item3">全&nbsp&nbsp&nbsp部</a>
+				</div>
+			</div>
+			
+			<div style="margin-top:98px;">
+				<div id="item1" class="mui-control-content  mui-active">
+					<div class="search_box">
+						<input type="" name="" id="" placeholder="姓名/手机号" />
+					</div>
+					<ul class="zs_list_1">
+						<li>
+							<div class="zs_list_p1">
+								<p>JDK环境变量的配置测试</p>
+							</div>
+							<div class="zs_list_p2">
+								<p>知识分类</p>
+								<span>类型</span>
+							</div>
+							<div class="zs_list_p3">
+								<div>
+									<p>作者 : <span>罗辑</span></p>
+								</div>
+								<div>
+									<p>2016-07-05</p>
+								</div>
+								<div class="fav">
+									<p>
+										(<span>1</span>)
+									</p>
+									<p>
+										(<span>1</span>)
+									</p>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div id="item2" class="mui-control-content">
+					<div class="search_box" >
+						<input type="" name="" id="" placeholder="姓名/手机号2" />
+					</div>
+				</div>
+				<div id="item3" class="mui-control-content">
+					<div class="search_box" >
+						<input type="" name="" id="" placeholder="姓名/手机号3" />
+					</div>
+				</div>
+			</div>
+			</form>
+	</div>
+	
+	<script src="js/jquery-1.11.0.js"></script>
+	<script src="js/mui.min.js"></script>
+	
+	
+	<script>
+		mui('body').on('tap','a',function(){
+		    window.top.location.href=this.href;
+		});
+//		mui.init();
+//			(function($) {
+//				
+//			})(mui);
+		
+//		$(function(){
+//			var W = $(".tishi_box>div div").width();
+//			$(".tishi_box>div div").css({
+//	        "height": W,
+//	    	});
+//	    	$(".content").css({
+//	        "margin-top": W+83,
+//	    	});
+//  	});
+		
+	</script>
+</body>
+</html>

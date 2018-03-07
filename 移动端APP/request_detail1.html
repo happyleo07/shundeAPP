@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>请求详情</title>
+	<link rel="stylesheet" href="css/common.css" />
+	<link rel="stylesheet" href="css/mui.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<style>
+		.re_content .row>div label{
+			width:80px;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div>
+			<a href="request_list.html">返回</a>
+			<p>请求详情</p>
+			<a href="pt_index.html">首页</a>
+		</div>
+	</header>
+	
+	<div class="mui-container content mt_1">
+			<div class="re_content_box">
+				<div class="re_title">
+					<h3>请求信息</h3>
+				</div>
+				<div class="re_content">
+					<div class="row">
+						<div>
+							<label for="">描述人 : </label>
+							<p> 姓名 </p>
+							<p>1334342343</p>
+						</div>
+					</div>
+					<div class="row">
+						<div>
+							<label for="">部门 : </label>
+							<p>部门</p>
+						</div>
+					</div>
+					<div class="row">
+						<div>
+							<label for="">所在位置 : </label>
+							<p>A楼201室</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="piker">
+							<label for="">请求描述 : </label>
+							<p class="wb">封面打印故障</p>
+									<!--<div class="xz">
+										<p>单选复选用这个</p><p>单选复选用这个</p><p>单选复选用这个</p>
+									</div>-->
+						</div>
+					</div>
+					<div class="row">
+								<div style="width:100%">
+									<a style="display: block;overflow: hidden;" href="fj_list.html">
+										<label for="">附件</label>
+										<span style="font-size: 14px;color: #313131;float: right;margin-right: 5px;">></span>
+									</a>
+								</div>
+					</div>
+				</div>
+			</div>
+			<div class="re_content_box">
+				<div class="re_title">
+					<h3>跟踪信息</h3>
+				</div>
+				<div class="re_content">
+					<ul class="lc">
+						<li class="cur">
+							<div>
+								<div>
+									<label for="">请求编号 : </label>
+									<p>REQ20170904003,</p>
+									<p>用户已评价</p>
+								</div>
+								<div>
+									<p>2017-09-05 13:19:05</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div>
+								<div>
+									<p>工单已完成,</p>
+									<label for="">处理人 : </label>
+									<p>潘娟</p>
+									<label for="">编号 : </label>
+									<p>S20170904003</p>
+								</div>
+								<div>
+									<p>2017-09-05 13:49:05</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div>
+								<div>
+									<p>工单已完成,</p>
+									<label for="">处理人 : </label>
+									<p>潘娟</p>
+									<label for="">编号 : </label>
+									<p>S20170904003</p>
+								</div>
+								<div>
+									<p>2017-09-05 13:49:05</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div>
+								<div>
+									<p>工单已完成,</p>
+									<label for="">处理人 : </label>
+									<p>潘娟</p>
+									<label for="">编号 : </label>
+									<p>S20170904003</p>
+								</div>
+								<div>
+									<p>2017-09-05 13:49:05</p>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+	</div>
+	<script src="js/jquery-1.11.0.js"></script>
+	<script src="js/mui.min.js"></script>
+	<script>
+		mui('body').on('tap','a',function(){
+		    window.top.location.href=this.href;
+		});
+//		$(function(){
+//			var W = $(".tishi_box>div div").width();
+//			$(".tishi_box>div div").css({
+//	        "height": W,
+//	    	});
+//	    	$(".content").css({
+//	        "margin-top": W+83,
+//	    	});
+//  	});
+	</script>
+</body>
+</html>

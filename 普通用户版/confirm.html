@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>确认与评价</title>
+	<link rel="stylesheet" href="css/common.css" />
+	<link rel="stylesheet" href="css/mui.css" />
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+	<header>
+		<div>
+			<a href="fu_list1.html">返回</a>
+			<p>确认与评价</p>
+			<a href="pt_index.html">首页</a>
+		</div>
+	</header>
+	
+	<div class="mui-container content mt_1 bt_1">
+			<div class="re_content_box">
+				<div class="re_title">
+					<h3>服务确认</h3>
+				</div>
+				<div class="re_content">
+						<form class="mui-input-group">
+							<div class="mui-input-row mui-radio">
+								<label>已解决</label>
+								<input name="radio1" type="radio"  checked>
+							</div>
+							<div class="mui-input-row mui-radio">
+								<label>部分解决</label>
+								<input name="radio1" type="radio">
+							</div>
+							<div class="mui-input-row mui-radio">
+								<label>未解决</label>
+								<input name="radio1" type="radio">
+							</div>
+						</form>
+				</div>
+			</div>
+			<div class="re_content_box">
+				<div class="re_title">
+					<h3>跟踪信息</h3>
+				</div>
+				<div class="re_content">
+					<ul>
+						<li class="cur">
+							<div>
+								<div>
+									<label for="">请求编号 : </label>
+									<p>REQ20170904003,</p>
+									<p>用户已评价</p>
+								</div>
+								<div>
+									<p>2017-09-05 13:19:05</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div>
+								<div>
+									<p>工单已完成,</p>
+									<label for="">处理人 : </label>
+									<p>潘娟</p>
+									<label for="">编号 : </label>
+									<p>S20170904003</p>
+								</div>
+								<div>
+									<p>2017-09-05 13:49:05</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div>
+								<div>
+									<p>工单已完成,</p>
+									<label for="">处理人 : </label>
+									<p>潘娟</p>
+									<label for="">编号 : </label>
+									<p>S20170904003</p>
+								</div>
+								<div>
+									<p>2017-09-05 13:49:05</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div>
+								<div>
+									<p>工单已完成,</p>
+									<label for="">处理人 : </label>
+									<p>潘娟</p>
+									<label for="">编号 : </label>
+									<p>S20170904003</p>
+								</div>
+								<div>
+									<p>2017-09-05 13:49:05</p>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="re_content_box">
+				<div class="re_title">
+					<h3>确认与评价</h3>
+				</div>
+				<div class="re_content">
+					<div class="row">
+						<div>
+							<label for="">确认与评价</label>
+							<ul>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+						</div>
+						<div style="float:right">
+							<p>部分解决</p>
+						</div>
+					</div>
+					<div class="row">
+						<div>
+							<label for="">意见与建议 : </label>
+							<p>满意</p>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+	<a class="bottom_btn" href="#">确认与评价</a>
+	<script src="js/jquery-1.11.0.js"></script>
+	<script src="js/mui.min.js"></script>
+	<script>
+		mui('body').on('tap','a',function(){
+		    window.top.location.href=this.href;
+		});
+//		$(function(){
+//			var W = $(".tishi_box>div div").width();
+//			$(".tishi_box>div div").css({
+//	        "height": W,
+//	    	});
+//	    	$(".content").css({
+//	        "margin-top": W+83,
+//	    	});
+//  	});
+	</script>
+</body>
+</html>

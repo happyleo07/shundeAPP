@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>工单详情</title>
+	<link rel="stylesheet" href="css/common.css" />
+	<link rel="stylesheet" href="css/mui.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<link href="css/mui.picker.css" rel="stylesheet" />
+	<link href="css/mui.poppicker.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="css/mui.picker.min.css" />
+	
+	<style type="text/css">
+	</style>
+</head>
+<body>
+	<header>
+		<div>
+			<a href="order_list.html">返回</a>
+			<p>工单详情</p>
+			<!--<a class="request" href="in_request">发起请求</a>-->
+		</div>
+	</header>
+	
+	<div class="mui-container content mt_1 bt_1">
+		<form action="">
+		<!--<div class="list_title" style="background: none;color:#333333">
+				<p style="color:#333333;font-weight:bold;">通知提醒</p>
+			</div>
+		<div >-->
+		<div class="mui-content">
+			<div id="slider" class="mui-slider">
+			<div class="tab_title mui-slider-indicator mui-segmented-control mui-segmented-control-inverted" id="sliderSegmentedControl">
+				<div id="segmentedControl" class="mui-segmented-control" >
+					<a class="mui-control-item mui-active" href="#item1mobile">基本信息</a>
+					<a class="mui-control-item" href="#item2mobile">处理信息</a>
+				</div>
+			</div>
+			<div class="mui-slider-group" style="margin-top:38px;">
+				<div id="item1mobile" class="mui-slider-item mui-control-content  mui-active">
+					<div id="scroll1" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+					<div class="re_content_box">
+						<div class="re_content">
+							<div class="row">
+								<div>
+									<label for="" style="margin-right:25px;">工单编号 </label>
+									<p>S20170906006</p>
+								</div>
+								<div style="float:right">
+									<label for="">执行中</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="re_content_box">
+						<div class="re_title">
+							<h3>计划信息</h3>
+						</div>
+						<div class="re_content1">
+							<div class="row">
+								<div style="width:auto">
+									<label for="">计划编号</label>
+									<p>REQ20171113011</p>
+								</div>
+								<div style="float:right;width:auto;">
+									<label for="" style="margin-right:5px">执行中</label>
+								</div>
+							</div>
+							<div class="row">
+								<div>
+									<label for="">计划标题</label>
+									<p>计划标题</p>
+								</div>
+							</div>
+							<div class="row">
+								<div>
+									<label for="" style="letter-spacing: 1px;">创  建  人</label>
+									<p>姓名</p>
+									<p>所在部门</p>
+								</div>
+							</div>
+							<div class="row">
+								<div>
+									<label for="">联系电话</label>
+									<p>15867676767</p>
+								</div>
+							</div>
+							<div class="row">
+								<div>
+									<label for="">循环次数</label>
+									<p>5</p>
+								</div>
+							</div>
+							<div class="row">
+								<div>
+									<label for="">循环周期</label>
+									<p>每天</p>
+								</div>
+							</div>
+							<div class="row">
+								<div>
+									<label for="">开始时间</label>
+									<p>2017-09-12  09:54:37</p>
+								</div>
+							</div>
+							<div class="row">
+								<div>
+									<label for="">结束时间</label>
+									<p>2017-09-12  09:54:37</p>
+								</div>
+							</div>
+							<div class="row">
+								<div style="width:100%">
+									<label for="">请求描述</label>
+									<p class="wb">打印报表时条目过多点击打印无反应等</p>
+									<!--<div class="xz">
+										<p>单选复选用这个</p><p>单选复选用这个</p><p>单选复选用这个</p>
+									</div>-->
+									
+								</div>
+							</div>
+							<div class="row">
+								<div>
+									<a  href="fj_list.html">
+										<label for="">附件</label>
+										<span style="">></span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="re_content_box">
+						<div class="re_title">
+							<h3>派单信息</h3>
+						</div>
+						<div class="re_content1">
+							<div class="row">
+								<div>
+									<label for="" style="letter-spacing: 1px;">派   单  人</label>
+									<p>王丽芳</p>
+								</div>
+							</div>
+							<div class="row">
+								<div>
+									<label for="" style="letter-spacing: 1px;">执  行  人</label>
+									<p>王丽芳</p>
+								</div>
+							</div>
+							<div class="row">
+								<div>
+									<label for="">要求解决时间</label>
+									<p>2017-09-6  09:54:37</p>
+								</div>
+							</div>
+							<div class="row">
+								<div>
+									<label for="">详细要求</label>
+									<p>根据客户要求解决</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+				</div>
+				<div id="item2mobile" class="mui-slider-item mui-control-content">
+					<div id="scroll1" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+					<div class="re_content_box">
+						<!--<div class="re_title">
+							<h3>请求信息</h3>
+						</div>-->
+						<div class="re_content">
+							<div class="row">
+								<div class="piker">
+									<label for="">工作类型</label>
+									<div id='showUserPicker'>
+										<button   type='button'>></button>
+										<span id="userResult"></span>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="piker">
+									<label for="">处理结果</label>
+									<div id='showUserPicker2' >
+										<button   type='button' >></button>
+										<span id="userResult2"></span>
+									</div>
+								</div>
+							</div>
+							
+							<div class="row">
+								<div class="piker">
+									<label for="">实际用时</label>
+									<div class="btn" id='demo5' data-options='{"type":"time"}'>
+										<button   type='button'>></button>
+										<span id="result"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="re_content_box">
+						<div class="re_title">
+							<h3>处理情况</h3>
+						</div>
+						<div class="re_content">
+							<textarea style="height:100px" rows="" cols="" placeholder="请在这里填写情况描述"></textarea>
+						</div>
+					</div>
+					<div class="re_content_box">
+						<div class="re_title">
+							<h3>附件图片</h3>
+						</div>
+						<div class="re_content">
+							<ul class="fj_img">
+								<li><a href="#"><img src="img/yuantiao.jpg"  data-preview-src="" data-preview-group="1" /></a>
+								</li>
+								<li><a href="#"><img src="img/1.jpg"  data-preview-src="" data-preview-group="1" /></a>
+								</li>
+								<li><a href="#"><img src="img/2.jpg"  data-preview-src="" data-preview-group="1" /></a>
+								</li>
+								<li><a id="add_img" href="#sheet1"><img src="img/add_img.png"  /></a>
+								</li>
+								
+							</ul>
+						</div>
+					</div>
+					<div class="re_content_box">
+						<div class="re_title">
+							<h3>跟踪信息</h3>
+						</div>
+						<div class="re_content">
+							<ul class="lc">
+								<li >
+									<div>
+										<!--<div>
+											<label for="">请求编号 : </label>
+											<p>REQ20170904003,</p>
+											<p>用户已评价</p>
+										</div>
+										<div>
+											<p>2017-09-05 13:19:05</p>
+										</div>-->
+										<div class="edit">
+											<a href="edit.html">
+												<label for="">添加跟踪信息</label>
+												<span style="font-size:18px;">></span>
+											</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div>
+										<div>
+											<p>请求已受理,</p>
+											<label for="">负责人 : </label>
+											<p>fgh</p>
+											<label for="">联系电话: </label>
+											<p>15656565656</p>
+										</div>
+										<div class="cw">
+											<p>2017-09-05 13:49:05</p>
+											<span>系统</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div>
+										<div>
+											<p>工单已派发,</p>
+											<label for="">处理人 : </label>
+											<p>xulu</p>
+											<label for="">联系电话 : </label>
+											<p>15656565656</p>
+										</div>
+										<div class="cw">
+											<p>2017-09-05 13:49:05</p>
+											<span>超级管理员</span>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				</div>
+				</div>
+			</div>
+			</div>
+			</div>
+			</form>
+	</div>
+	<div class="bottom_btn_box">
+		<button>执行</button>
+		<button>转派</button>
+	</div>
+	<div class="bottom_btn_box2">
+		<button>保存</button>
+		<button>完成</button>
+	</div>
+	<div id="sheet1" class="mui-popover mui-popover-bottom mui-popover-action" >
+					    <!-- 可选择菜单 -->
+					    <ul class="mui-table-view">
+					      <li class="mui-table-view-cell">
+					        <a href="#">拍照</a>
+					      </li>
+					      <li class="mui-table-view-cell">
+					        <a href="#">从相册中选择</a>
+					      </li>
+					    </ul>
+					    <!-- 取消菜单 -->
+					    <ul class="mui-table-view">
+					      <li class="mui-table-view-cell">
+					        <a href="#sheet1"><b>取消</b></a>
+					      </li>
+					    </ul>
+					</div>
+	<script src="js/jquery-1.11.0.js"></script>
+	<script src="js/mui.min.js"></script>
+	<script src="js/mui.zoom.js"></script>
+	<script src="js/mui.previewimage.js"></script>
+	<script src="js/mui.picker.min.js"></script>
+	<script src="js/mui.poppicker.js"></script>
+	<script src="js/city.data.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/city.data-3.js" type="text/javascript" charset="utf-8"></script>
+	
+	<script>
+		mui('header,.mui-slider-group').on('tap','a',function(){
+		    window.top.location.href=this.href;
+		});
+		$(function(){
+			var H = $("html").height();
+			$(".mui-control-content").css({
+	        "min-height": H-43-38,
+	    	});
+	    	var SH = $(".fj_img li").width();
+	    	$(".fj_img li").css({
+	    		"height":SH+2,
+	    	});
+    	});
+    	
+//		mui.init();
+//			(function($) {
+//				
+//			})(mui);
+		
+//		$(function(){
+//			var W = $(".tishi_box>div div").width();
+//			$(".tishi_box>div div").css({
+//	        "height": W,
+//	    	});
+//	    	$(".content").css({
+//	        "margin-top": W+83,
+//	    	});
+//  	});
+		$(function(){
+			$(".bottom_btn_box button:eq(0)").click(function(){
+				$(".bottom_btn_box2").show();
+				$(".bottom_btn_box").hide();
+			});
+			$(".bottom_btn_box button:eq(1)").click(function(){
+				location.href ="request_clp_menu.html";
+			});
+		});
+		
+		(function($, doc) {
+				$.init();
+				$.ready(function() {
+					/**
+					 * 获取对象属性的值
+					 * 主要用于过滤三级联动中，可能出现的最低级的数据不存在的情况，实际开发中需要注意这一点；
+					 * @param {Object} obj 对象
+					 * @param {String} param 属性名
+					 */
+					var _getParam = function(obj, param) {
+						return obj[param] || '';
+					};
+					//普通示例
+					var userPicker = new $.PopPicker();
+					userPicker.setData([{
+						value: 'ywj',
+						text: '上门处理'
+					}, {
+						value: 'aaa',
+						text: '加班处理'
+					}]);
+					
+					var showUserPickerButton = doc.getElementById('showUserPicker');
+					var userResult = doc.getElementById('userResult');
+					showUserPickerButton.addEventListener('tap', function(event) {
+//						userPicker.show(function(items) {
+//							userResult.innerText = JSON.stringify(items[0]);
+////							userResult.innerText =;
+//
+//							//返回 false 可以阻止选择框的关闭
+//							//return false;
+//						});
+						userPicker.show(function (items) {
+						    userResult.innerText = items[0].text;
+						 });
+					}, false);
+					//-----------------------------------------
+					//普通示例
+					var userPicker2 = new $.PopPicker();
+					userPicker2.setData([{
+						value: 'ywj',
+						text: '加班处理'
+					}, {
+						value: 'aaa',
+						text: '上门处理'
+					}]);
+					
+					var showUserPickerButton2 = doc.getElementById('showUserPicker2');
+					var userResult2 = doc.getElementById('userResult2');
+					showUserPickerButton2.addEventListener('tap', function(event) {
+//						userPicker.show(function(items) {
+//							userResult.innerText = JSON.stringify(items[0]);
+////							userResult.innerText =;
+//
+//							//返回 false 可以阻止选择框的关闭
+//							//return false;
+//						});
+						userPicker2.show(function (items) {
+						    userResult2.innerText = items[0].text;
+						 });
+					}, false);
+					//-----------------------------------------
+					
+				});
+			})(mui, document);
+		mui.previewImage();
+		mui('#sheet1').popover('toggle');
+		mui('.mui-popover').popover('toggle',document.getElementById("#sheet1"));
+		mui.init({
+				swipeBack: false
+			});
+			(function($) {
+				$('.mui-scroll-wrapper').scroll({
+					indicators: true //是否显示滚动条
+				});
+//				var html2 = ;
+				var item2 = document.getElementById('item2mobile');
+				document.getElementById('slider').addEventListener('slide', function(e) {
+					if (e.detail.slideNumber === 1) {
+						if (item2.querySelector('.mui-loading')) {
+							setTimeout(function() {
+								item2.querySelector('.mui-scroll').innerHTML = html2;
+							}, 500);
+						}
+					} else if (e.detail.slideNumber === 2) {
+						if (item3.querySelector('.mui-loading')) {
+							setTimeout(function() {
+								item3.querySelector('.mui-scroll').innerHTML = html3;
+							}, 500);
+						}
+					}
+				});
+				var sliderSegmentedControl = document.getElementById('sliderSegmentedControl');
+				$('.mui-input-group').on('change', 'input', function() {
+					if (this.checked) {
+						sliderSegmentedControl.className = 'mui-slider-indicator mui-segmented-control mui-segmented-control-inverted mui-segmented-control-' + this.value;
+						//force repaint
+						sliderProgressBar.setAttribute('style', sliderProgressBar.getAttribute('style'));
+					}
+				});
+				
+			})(mui);
+			
+			
+//			时间选择
+			mui.init();
+			(function($) {
+				$.init();
+				var result = $('#result')[0];
+				var btns = $('.btn');
+				btns.each(function(i, btn) {
+					btn.addEventListener('tap', function() {
+						var _self = this;
+						if(_self.picker) {
+							_self.picker.show(function (rs) {
+								result.innerText = '选择结果: ' + rs.text;
+								_self.picker.dispose();
+								_self.picker = null;
+							});
+						} else {
+							var optionsJson = this.getAttribute('data-options') || '{}';
+							var options = JSON.parse(optionsJson);
+							var id = this.getAttribute('id');
+							/*
+							 * 首次显示时实例化组件
+							 * 示例为了简洁，将 options 放在了按钮的 dom 上
+							 * 也可以直接通过代码声明 optinos 用于实例化 DtPicker
+							 */
+							_self.picker = new $.DtPicker(options);
+							_self.picker.show(function(rs) {
+								/*
+								 * rs.value 拼合后的 value
+								 * rs.text 拼合后的 text
+								 * rs.y 年，可以通过 rs.y.vaue 和 rs.y.text 获取值和文本
+								 * rs.m 月，用法同年
+								 * rs.d 日，用法同年
+								 * rs.h 时，用法同年
+								 * rs.i 分（minutes 的第二个字母），用法同年
+								 */
+								result.innerText = rs.text;
+								/* 
+								 * 返回 false 可以阻止选择框的关闭
+								 * return false;
+								 */
+								/*
+								 * 释放组件资源，释放后将将不能再操作组件
+								 * 通常情况下，不需要示放组件，new DtPicker(options) 后，可以一直使用。
+								 * 当前示例，因为内容较多，如不进行资原释放，在某些设备上会较慢。
+								 * 所以每次用完便立即调用 dispose 进行释放，下次用时再创建新实例。
+								 */
+								_self.picker.dispose();
+								_self.picker = null;
+							});
+						}
+						
+					}, false);
+				});
+			})(mui);
+	</script>
+</body>
+</html>

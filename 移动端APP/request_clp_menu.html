@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>请求人选择</title>
+	<link rel="stylesheet" href="css/common.css" />
+	<link rel="stylesheet" href="css/mui.css" />
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+	<header>
+		<div>
+			<a href="order_detail1.html">返回</a>
+			<p>处理人选择</p>
+			<!--<a href="yw_index.html">首页</a>-->
+		</div>
+	</header>
+	
+	<div class="mui-container content mt_1 bt_2">
+			<div class="search_box">
+				<input type="" name="" id="" placeholder="姓名/手机号" />
+			</div>
+			<div style="margin-top:70px;">
+				<ul class="p_menu">
+					<li>
+						<a href="#">
+							<label for="">数字档案室</label>
+							<p>杨美</p>
+							<p>13984440167</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<label for="">数字档案室</label>
+							<p>杨美</p>
+							<p>13984440167</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<label for="">数字档案室</label>
+							<p>杨美</p>
+							<p>13984440167</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<label for="">数字档案室</label>
+							<p>杨美</p>
+							<p>13984440167</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<label for="">数字档案室</label>
+							<p>杨美</p>
+							<p>13984440167</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<label for="">数字档案室</label>
+							<p>杨美</p>
+							<p>13984440167</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<label for="">数字档案室</label>
+							<p>杨美</p>
+							<p>13984440167</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<label for="">数字档案室</label>
+							<p>杨美</p>
+							<p>13984440167</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<label for="">数字档案室</label>
+							<p>杨美</p>
+							<p>13984440167</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<label for="">数字档案室</label>
+							<p>杨美</p>
+							<p>13984440167</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+	</div>
+	<div class="shadow"></div>
+	<div class="bottom_p_btn">
+		<div class="bo_left">
+			<button></button>
+			<div>
+				<p>杨过</p>
+				<p>张无忌</p>
+				<p>张无忌</p>
+			</div>
+		</div>
+		<button>转&nbsp&nbsp派</button>
+		<div class="clear"></div>
+	</div>
+	<div class="choose_list">
+		<div>已选择处理人</div>
+		<ul>
+			<li>
+				<div>
+					<p>数字档案室</p>
+					<div>
+						<p>杨美</p>
+						<p>13984440167</p>
+					</div>
+				</div>
+				<a href="#">X</a>
+			</li>
+			<li>
+				<div>
+					<p>数字档案室</p>
+					<div>
+						<p>杨美</p>
+						<p>13984440167</p>
+					</div>
+				</div>
+				<a href="#">X</a>
+			</li>
+			<li>
+				<div>
+					<p>数字档案室</p>
+					<div>
+						<p>杨美</p>
+						<p>13984440167</p>
+					</div>
+				</div>
+				<a href="#">X</a>
+			</li>
+		</ul>
+	</div>
+	<script src="js/jquery-1.11.0.js"></script>
+	<script src="js/mui.min.js"></script>
+	<script>
+		mui('body').on('tap','a',function(){
+		    window.top.location.href=this.href;
+		});
+//		$(function(){
+//			var W = $(".tishi_box>div div").width();
+//			$(".tishi_box>div div").css({
+//	        "height": W,
+//	    	});
+//	    	$(".content").css({
+//	        "margin-top": W+83,
+//	    	});
+//  	});
+		$(".bo_left button").click(function(){
+			$(".shadow").toggle();
+			$(".choose_list").slideToggle();
+		});
+		$(".shadow").click(function(){
+			$(".choose_list").slideUp();
+			$(this).hide();
+		});
+	</script>
+</body>
+</html>

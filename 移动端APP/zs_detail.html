@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>知识展示</title>
+	<link rel="stylesheet" href="css/common.css" />
+	<link rel="stylesheet" href="css/mui.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<style>
+		.fj_list li{
+			margin-top: 10px;
+		}
+		.fj_list{
+			margin:0 auto;
+		}
+		.re_content1 .row>div label{
+			color:#0069b4
+		} 
+		.re_content1 .row>div p{
+			margin-right: 0;
+		} 
+	</style>
+</head>
+<body>
+	<header>
+		<div>
+			<a href="zs_list.html">返回</a>
+			<p>知识展示</p>
+			<a href="yw_index.html">首页</a>
+		</div>
+	</header>
+	<div class="mui-container content mt_1 bt_1">
+		<div class="zs_content">
+				<div class="zs_nr">
+					<div>
+						<label>JDK环境变量的配置测试</label>
+						<span>创建者姓名</span>
+					</div>
+					<div>
+						<p>2016-07-05</p>
+						<p>知识分类</p>
+						<span>类型</span>
+					</div>
+				</div>
+				<div class="zs_nr_detail">
+					<div>
+						<p>1.问题描述</p>
+						<p>问题描述问题描述问题描述</p>
+					</div>
+					<div>
+						<p>2.临时解决方法</p>
+						<p>问题描述问题描述问题描述</p>
+					</div>
+					<div>
+						<p>3.问题原因</p>
+						<p>问题描述问题描述问题描述</p>
+					</div>
+				</div>
+		</div>
+		<div class="re_content_box">
+				<div class="re_title">
+					<h3>附件<span style="font-size:16px;color:#ffffff">(数量)</span></h3>
+				</div>
+				<div class="re_content">
+					<ul class="fj_list">
+					<li>
+						<a href="#">
+							<div class="img">
+								<img src="img/fj_bg.png" alt="" />
+							</div>
+							<div>
+								<p>20171124.pdf</p>
+								<p>21MB</p>
+							</div>
+							<i></i>
+							<!--暂停用这个<i class="stop"></i>-->
+							<!--下载完成用这个<i class="done"></i>-->
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="img">
+								<img src="img/yuantiao.jpg" alt="" />
+							</div>
+							<div>
+								<p>20171124.pdf</p>
+								<p>21MB</p>
+							</div>
+							<i></i>
+						</a>
+					</li>
+				</ul>
+				</div>
+			</div>
+		
+		<div class="re_content_box">
+				<div class="re_title">
+					<h3>评论<span style="font-size:16px;color:#ffffff">(数量)</span></h3>
+				</div>
+				<div class="re_content1">
+					<div class="row">
+						<div>
+							<label for="">用户11</label>
+							<p style="float:right;">1小时前</p>
+						</div>
+						<div>
+							<p>1334342343133434234313343423431334342343</p>
+						</div>
+					</div>
+					<div class="row">
+						<div>
+							<label for="">用户11</label>
+							<p style="float:right;">1小时前</p>
+						</div>
+						<div>
+							<p>1334342343133434234313343423431334342343</p>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+	<div class="bottom_btn_box3">
+		<!--<div>
+			
+		</div>
+		<div></div>
+		<div></div>-->
+		<a href="comment.html">发表评论</a>
+		<a href="javascript:void(0)" class="zs_fav">收藏</a>
+		
+		<a href="javascript:void(0)" onclick="change()" id="A"><img id="IMG" src="img/heart.png"><span>点赞（<div class="number" id="num">44</div>）</span></a>
+
+	</div>
+	<script src="js/jquery-1.11.0.js"></script>
+	<script src="js/mui.min.js"></script>
+	<script>
+		window.onload = function() {
+			
+			////////
+			var a = document.getElementById("A")
+			var number = document.getElementById("num").innerText;
+			var flag = true;				
+			a.onclick = function change() {
+				if(flag) {
+					document.getElementById("IMG").src = "img/heart_click.png";
+					number1 = ++number;
+					console.log(number1);
+					document.getElementById("num").innerText = number1;
+					flag=false;
+				}					
+			}
+		}
+//		mui('body').on('tap','a',function(){
+//		    window.top.location.href=this.href;
+//		});
+		$(function(){
+			$(".zs_fav").click(function(){
+				if($(".zs_fav").hasClass("fav_cur")){
+					$(this).removeClass("fav_cur");
+					$(this).html("收藏");
+				}
+				else{
+					$(".zs_fav").addClass("fav_cur");
+					$(this).html("取消收藏");
+				}
+			});
+		});
+		
+		
+
+		
+	</script>
+</body>
+</html>

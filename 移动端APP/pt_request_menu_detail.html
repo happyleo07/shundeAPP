@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>填写请求信息</title>
+	<link rel="stylesheet" href="css/common.css" />
+	<link rel="stylesheet" href="css/mui.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/mui.picker.min.css" />
+</head>
+<body>
+	<header>
+		<div>
+			<a href="pt_request_menu.html">返回</a>
+			<p>填写请求信息</p>
+			<!--<a href="yw_index.html">首页</a>-->
+		</div>
+	</header>
+	
+	<div class="mui-container content mt_1 bt_1">
+		<form action="">
+			<div class="re_content_box">
+				<div class="re_de_title">
+					<label for="">服务目录</label>
+					<p style="float:left;margin-left:25px">软件应用类 -邮件故障</p>
+				</div>
+				<div class="re_de_cont">
+					<a href="#">
+						<div>
+							<label for="" style="letter-spacing: 7px;">请求人</label>
+							<p>姓名</p>
+							<p>部门</p>
+						</div>
+						<div>
+							<label for="" >联系电话</label>
+							<p>电话号码</p>
+						</div>
+					</a>
+					<div>
+						<label for="" ></label>
+						
+					</div>
+				</div>
+			</div>
+			
+			<div class="re_content_box">
+				<div class="re_title">
+					<h3>所在位置</h3>
+				</div>
+				<div class="re_content">
+					<input type="text" placeholder="请在这里填写所在位置"/>
+				</div>
+			</div>
+			<div class="re_content_box">
+				<div class="re_title">
+					<h3>请求描述</h3>
+				</div>
+				<div class="re_content">
+					<textarea name="" rows="" cols="" placeholder="请在这里填写情况描述"></textarea>
+				</div>
+			</div>
+			<div class="re_content_box">
+				<div class="re_title">
+					<h3>请求描述</h3>
+				</div>
+				<div class="re_content">
+							<div class="mui-input-row mui-radio row">
+								<label>已解决</label>
+								<input name="radio1" type="radio"  checked>
+							</div>
+							<div class="mui-input-row mui-radio row">
+								<label>部分解决</label>
+								<input name="radio1" type="radio">
+							</div>
+							<div class="mui-input-row mui-radio row">
+								<label>未解决</label>
+								<input name="radio1" type="radio">
+							</div>
+				</div>
+			</div>
+			<div class="re_content_box">
+				<div class="re_title">
+					<h3>请求描述</h3>
+				</div>
+				<div class="re_content">
+							<div class="mui-input-row mui-checkbox  row" >
+								<label>选项1</label>
+								<input name="checkbox" value="Item 1" type="checkbox" checked>
+							</div>
+							<div class="mui-input-row mui-checkbox  row">
+								<label>选项2</label>
+								<input name="checkbox" value="Item 2" type="checkbox" >
+							</div>
+							<div class="mui-input-row mui-checkbox  row">
+								<label>选项3</label>
+								<input name="checkbox" value="Item 2" type="checkbox" >
+							</div>
+				</div>
+			</div>
+			<div class="re_content_box">
+						<div class="re_title">
+							<h3>请求描述</h3>
+						</div>
+						<div class="re_content">
+							<div class="row">
+								<div class="piker mui-input-row">
+									<label for="" id='result'>工作时间</label>
+									<div style="margin-right:15px;width:55%">
+										<button  class="btn" style="width: 80%;
+    text-align: right;" id='demo4' data-options='{"type":"date"}' type='button'>></button>
+										<span id="userResult"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+			<div class="re_content_box">
+				<div class="re_title">
+					<h3>附加图片</h3>
+				</div>
+				<div class="re_content">
+					<ul class="fj_img">
+						<li><a href="#"><img src="img/yuantiao.jpg"  data-preview-src="" data-preview-group="1" /></a>
+						</li>
+						<li><a id="add_img" href="#sheet1"><img src="img/add_img.png"  /></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="sheet1" class="mui-popover mui-popover-bottom mui-popover-action" >
+			    <!-- 可选择菜单 -->
+			    <ul class="mui-table-view">
+			      <li class="mui-table-view-cell">
+			        <a href="#">拍照</a>
+			      </li>
+			      <li class="mui-table-view-cell">
+			        <a href="#">从相册中选择</a>
+			      </li>
+			    </ul>
+			    <!-- 取消菜单 -->
+			    <ul class="mui-table-view">
+			      <li class="mui-table-view-cell">
+			        <a href="#sheet1"><b>取消</b></a>
+			      </li>
+			    </ul>
+			</div>
+		</form>
+	</div>
+	<a class="bottom_btn" id='confirmBtn' href="#">提交</a>
+	<div id="info" style="display: none;"></div>
+	<script src="js/jquery-1.11.0.js"></script>
+	<script src="js/mui.min.js"></script>
+	<script src="js/mui.picker.min.js"></script>
+	<script src="js/mui.zoom.js"></script>
+	<script src="js/mui.previewimage.js"></script>
+	<script>
+		mui('body').on('tap','a',function(){
+		    window.top.location.href=this.href;
+		});
+		mui.init();
+		(function($) {
+				$.init();
+				var result = $('#result')[0];
+				var btns = $('.btn');
+				btns.each(function(i, btn) {
+					btn.addEventListener('tap', function() {
+						var _self = this;
+						if(_self.picker) {
+							_self.picker.show(function (rs) {
+								result.innerText = '选择结果: ' + rs.text;
+								_self.picker.dispose();
+								_self.picker = null;
+							});
+						} else {
+							var optionsJson = this.getAttribute('data-options') || '{}';
+							var options = JSON.parse(optionsJson);
+							var id = this.getAttribute('id');
+							/*
+							 * 首次显示时实例化组件
+							 * 示例为了简洁，将 options 放在了按钮的 dom 上
+							 * 也可以直接通过代码声明 optinos 用于实例化 DtPicker
+							 */
+							_self.picker = new $.DtPicker(options);
+							_self.picker.show(function(rs) {
+								/*
+								 * rs.value 拼合后的 value
+								 * rs.text 拼合后的 text
+								 * rs.y 年，可以通过 rs.y.vaue 和 rs.y.text 获取值和文本
+								 * rs.m 月，用法同年
+								 * rs.d 日，用法同年
+								 * rs.h 时，用法同年
+								 * rs.i 分（minutes 的第二个字母），用法同年
+								 */
+								result.innerText = rs.text;
+								/* 
+								 * 返回 false 可以阻止选择框的关闭
+								 * return false;
+								 */
+								/*
+								 * 释放组件资源，释放后将将不能再操作组件
+								 * 通常情况下，不需要示放组件，new DtPicker(options) 后，可以一直使用。
+								 * 当前示例，因为内容较多，如不进行资原释放，在某些设备上会较慢。
+								 * 所以每次用完便立即调用 dispose 进行释放，下次用时再创建新实例。
+								 */
+								_self.picker.dispose();
+								_self.picker = null;
+							});
+						}
+						
+					}, false);
+				});
+			})(mui);
+		$(function(){
+			var SH = $(".fj_img li").width();
+	    	$(".fj_img li").css({
+	    		"height":SH+2,
+	    	});
+		});
+//		mui.init();
+//			(function($) {
+//				
+//			})(mui);
+		document.getElementById("confirmBtn").addEventListener('tap', function() {
+				var btnArray = ['是', '否'];
+				mui.confirm('确认提交？', 'Hello 用户', btnArray, function(e) {
+					if (e.index == 0) {
+						info.innerText = '提交成功';
+					} else {
+						info.innerText = '取消提交'
+					}
+				})
+			});
+		mui.previewImage();
+		
+		mui('#sheet1').popover('toggle');
+		mui('.mui-popover').popover('toggle',document.getElementById("#sheet1"));
+		
+	</script>
+</body>
+</html>
